@@ -6,12 +6,13 @@ import SignUp from './components/SignUp';
 
 function App() {
 
+  const isLoggedIn = true;
   return (
-    <>
+    <div>
 {
-  <SignIn /> && <SignUp />
+  isLoggedIn ? <SignUp /> : <SignIn />
 }
-    </>
+    </div>
   );
 }
 

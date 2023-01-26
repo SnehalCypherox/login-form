@@ -9,7 +9,7 @@ export const fnmValidator = (fnm) => {
 export const lnmValidator = (lnm) => {
     if (!lnm) {
         return 'Lastname is required'
-    } 
+    }
     return "";
 };
 
@@ -22,22 +22,21 @@ export const emailValidator = (email) => {
     return "";
 };
 
-export const mobile = (mobile) => {
+export const mobileValidator = (mobile) => {
     if (!mobile) {
         return 'Mobile Number is required'
-    } else if (!new /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/.test(email)) {
-        return 'Incorrect Mobile Formate'
-    } else if (length.toFixed(10)) {
-        return "mobile number must be in 10 digits"
-    }
+    } 
+    // else if (mobile.target.value.length > 10) {
+    //     return 'Enter 10 digit number'
+    // }
     return "";
 };
 
-export const pwd = (pwd) => {
+export const pwdValidator = (pwd) => {
     if (!pwd) {
         return 'Email is required'
-    } else if (length.toFixed(8)) {
-        return 'Enter 8 digit password'
+    } else if (pwd.target.value.length > 8) {
+        return 'Password must be 8 character'
     }
     return "";
 };
